@@ -36,7 +36,7 @@ Results are `Iterator<String>` in upper case.
 usnames.Derived.allFirstNames()
 ```
 
-60 unisex names (used equally by males and females):
+60 unisex first names (used equally by males and females):
 
 ```java
 usnames.Derived.unisexFirstNames()
@@ -91,3 +91,9 @@ usnames.Nickname.lookup("AGNES")     // => AGGY
 usnames.Nickname.lookup("AGATHA")    // => AGGY
 usnames.Nickname.lookup("ISABELLA")  // => BELLA
 ```
+
+# Maven
+
+* Group: tv.cntt
+* Artifact: usnames
+* Version: 1.0.0
