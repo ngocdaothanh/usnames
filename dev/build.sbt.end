@@ -1,0 +1,40 @@
+
+// Add diagrams to Scaladoc, graphviz is required
+//scalacOptions in (Compile, doc) += "-diagrams"
+
+// Publish to Sonatype
+// https://github.com/sbt/sbt.github.com/blob/gen-master/src/jekyll/using_sonatype.md
+
+publishTo <<= (version) { version: String =>
+  val nexus = "https://oss.sonatype.org/"
+  if (version.trim.endsWith("SNAPSHOT")) Some("snapshots" at nexus + "content/repositories/snapshots")
+  else                                   Some("releases"  at nexus + "service/local/staging/deploy/maven2")
+}
+
+publishMavenStyle := true
+
+publishArtifact in Test := false
+
+pomIncludeRepository := { _ => false }
+
+pomExtra := (
+  <url>https://github.com/ngocdaothanh/usnames</url>
+  <licenses>
+    <license>
+      <name>MIT</name>
+      <url>https://github.com/ngocdaothanh/usnames/blob/master/MIT-LICENSE</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <url>https://github.com/ngocdaothanh/usnames.git</url>
+    <connection>scm:git:https://github.com/ngocdaothanh/usnames.git</connection>
+  </scm>
+  <developers>
+    <developer>
+      <id>ngocdaothanh</id>
+      <name>Ngoc Dao</name>
+      <url>https://github.com/ngocdaothanh</url>
+    </developer>
+  </developers>
+)
