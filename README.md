@@ -8,7 +8,7 @@ See [Deron Meranda's Data Page](http://deron.meranda.us/data/).
 usnames.Cencus.popularLastNames()
 ```
 
-90,000 last names:
+88,799 last names:
 
 ```java
 usnames.Cencus.allLastNames()
@@ -42,7 +42,7 @@ usnames.Derived.allFirstNames()
 usnames.Derived.unisexFirstNames()
 ```
 
-306 names used as both first and last names:
+304 names used as both first and last names:
 
 ```java
 usnames.Derived.commonBothNames()
